@@ -1,6 +1,6 @@
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/decatf/sepolicy
+	vendor/decatf/sepolicy
 
 BOARD_SEPOLICY_UNION += \
-    sysinit.te \
+	sysinit.te
