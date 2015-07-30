@@ -27,16 +27,15 @@ PRODUCT_PACKAGES += \
     javax.btobex \
     powertop
 
-# CM-12.0 ffmpeg
-#PRODUCT_COPY_FILES += \
-#    frameworks/av/media/libstagefright/data/media_codecs_ffmpeg.xml:system/etc/media_codecs_ffmpeg.xml \
-
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
-    libstagefright_soft_ffmpegadec \
-    libstagefright_soft_ffmpegvdec \
-    libFFmpegExtractor \
+    libffmpeg_extractor \
+    libffmpeg_omx \
     media_codecs_ffmpeg.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.sf.omx-plugin=libffmpeg_omx.so \
+    media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # aosp master libavc stagefright
 PRODUCT_PACKAGES += \
@@ -53,6 +52,10 @@ endif
 
 -include vendor/decatf/sepolicy/sepolicy.mk
 
+# Inherit sabermod vendor
+# SM_VENDOR := vendor/sm
+# include $(SM_VENDOR)/Main.mk
+
 # Android system toolchain
 # TARGET_GCC_VERSION_EXP := 4.8
 # TARGET_TOOLCHAIN_ROOT := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/linaro-arm-eabi-$(TARGET_GCC_VERSION)
@@ -60,8 +63,9 @@ endif
 
 # Kernel toolchain
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-5.1
+# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-5.1
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.3-2015.03
+# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.4-2015.06
 
 # Add backup-tool.sh to install script
 BACKUP_TOOL := true
