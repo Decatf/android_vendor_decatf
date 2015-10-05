@@ -17,29 +17,7 @@ PRODUCT_COPY_FILES += \
     vendor/decatf/prebuilt/bin/sysinit:system/bin/sysinit
 
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Terminal
-
-# Parts from CM-12.0 
-PRODUCT_PACKAGES += \
-    CMFileManager \
-    DSPManager \
-    javax.btobex \
-    powertop
-
-# Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libffmpeg_extractor \
-    libffmpeg_omx \
-    media_codecs_ffmpeg.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
-
-# aosp master libavc stagefright
-PRODUCT_PACKAGES += \
-	libstagefright_soft_avcdec
+    Launcher3
 
 PRODUCT_PACKAGES += \
 	liblog-benchmarks \
@@ -51,10 +29,6 @@ ifeq ($(USE_PREBUILT_CHROMIUM),1)
 endif
 
 -include vendor/decatf/sepolicy/sepolicy.mk
-
-# Inherit sabermod vendor
-# SM_VENDOR := vendor/sm
-# include $(SM_VENDOR)/Main.mk
 
 # Android system toolchain
 # TARGET_GCC_VERSION_EXP := 4.8
@@ -69,7 +43,3 @@ endif
 
 # Add backup-tool.sh to install script
 BACKUP_TOOL := true
-
-# Inherit sabermod vendor
-SM_VENDOR := vendor/sm
-include $(SM_VENDOR)/Main.mk
