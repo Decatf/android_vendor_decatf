@@ -37,6 +37,7 @@ endif
 
 # Kernel toolchain
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-5.1
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.3-2015.03
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.4-2015.06
