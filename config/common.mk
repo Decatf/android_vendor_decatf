@@ -10,23 +10,25 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/decatf/overlay/common
 
 # Init script file with custom extras
 PRODUCT_COPY_FILES += \
-	vendor/decatf/prebuilt/etc/init.local.rc:root/init.custom.rc
+    vendor/decatf/prebuilt/etc/init.local.rc:root/init.custom.rc
 
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/decatf/prebuilt/bin/sysinit:system/bin/sysinit
 
 PRODUCT_PACKAGES += \
-    Launcher3
+    Launcher3 \
+    CMFileManager \
+    busybox
 
 PRODUCT_PACKAGES += \
-	liblog-benchmarks \
-	bionic-benchmarks
+    liblog-benchmarks \
+    bionic-benchmarks
 
 # Chromium Prebuilt
-ifeq ($(USE_PREBUILT_CHROMIUM),1)
-    $(call inherit-product, prebuilts/chromium/p4wifi/chromium_prebuilt.mk)
-endif
+#ifeq ($(USE_PREBUILT_CHROMIUM),1)
+#    $(call inherit-product, prebuilts/chromium/p4wifi/chromium_prebuilt.mk)
+#endif
 
 -include vendor/decatf/sepolicy/sepolicy.mk
 
@@ -37,10 +39,11 @@ endif
 
 # Kernel toolchain
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
-TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
+# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-5.1
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.3-2015.03
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.4-2015.06
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Add backup-tool.sh to install script
 BACKUP_TOOL := true
