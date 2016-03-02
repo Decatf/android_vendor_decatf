@@ -16,6 +16,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/decatf/prebuilt/bin/sysinit:system/bin/sysinit
 
+# disable systemless supersu
+PRODUCT_COPY_FILES += \
+    vendor/decatf/prebuilt/.supersu:system/.supersu
+
 PRODUCT_PACKAGES += \
     Launcher3 \
     CMFileManager \
