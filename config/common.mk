@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/decatf/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
+# disable systemless supersu
+PRODUCT_COPY_FILES += \
+    vendor/decatf/prebuilt/.supersu:system/.supersu
+
 PRODUCT_PACKAGES += \
     Launcher3 \
     CMFileManager \
