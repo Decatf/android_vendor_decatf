@@ -14,16 +14,17 @@ PRODUCT_COPY_FILES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/decatf/prebuilt/bin/sysinit:system/bin/sysinit \
-    vendor/decatf/prebuilt/etc/init.d/01_dummy:system/etc/init.d/01_dummy \
+    vendor/decatf/prebuilt/bin/sysinit:system/bin/sysinit
 
+<<<<<<< HEAD
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/decatf/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
-
+=======
 # disable systemless supersu
 PRODUCT_COPY_FILES += \
     vendor/decatf/prebuilt/.supersu:system/.supersu
+>>>>>>> parent of 7ff206e... Revert "Disable systemless supersu"
 
 PRODUCT_PACKAGES += \
     Launcher3 \
