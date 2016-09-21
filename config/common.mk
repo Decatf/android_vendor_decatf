@@ -34,25 +34,9 @@ PRODUCT_PACKAGES += \
     liblog-benchmarks \
     bionic-benchmarks
 
-# Chromium Prebuilt
-#ifeq ($(USE_PREBUILT_CHROMIUM),1)
-#    $(call inherit-product, prebuilts/chromium/p4wifi/chromium_prebuilt.mk)
-#endif
-
 -include vendor/decatf/sepolicy/sepolicy.mk
-
-# Android system toolchain
-# TARGET_GCC_VERSION_EXP := 4.8
-# TARGET_TOOLCHAIN_ROOT := prebuilts/gcc/$(HOST_PREBUILT_TAG)/arm/linaro-arm-eabi-$(TARGET_GCC_VERSION)
-# TARGET_TOOLS_PREFIX := $(TARGET_TOOLCHAIN_ROOT)/bin/arm-linux-gnueabi-
 
 # Kernel toolchain
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
-# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-5.1
-# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.3-2015.03
-# TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-cortex-linux-gnueabi-linaro_4.9.4-2015.06
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
-
-# Add backup-tool.sh to install script
-BACKUP_TOOL := true
