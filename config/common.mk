@@ -23,7 +23,7 @@ PRODUCT_COPY_FILES += \
 
 # disable systemless supersu
 PRODUCT_COPY_FILES += \
-    vendor/decatf/prebuilt/.supersu:system/.supersu
+    vendor/decatf/prebuilt/supersu_config:system/supersu_config
 
 PRODUCT_PACKAGES += \
     Launcher3 \
