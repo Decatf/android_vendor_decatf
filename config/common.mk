@@ -51,4 +51,8 @@ PRODUCT_PACKAGES += \
 # Kernel toolchain
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 # TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.8
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+# TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+
+# Linaro
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-cortex-linux-gnueabi-
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-cortex-linux-gnueabi-linaro_4.9.4-2015.06/bin
