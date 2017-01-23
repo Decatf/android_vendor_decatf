@@ -25,10 +25,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/decatf/prebuilt/supersu_config:system/supersu_config
 
-PRODUCT_PACKAGES += \
-    Launcher3 \
-    CMFileManager \
-    busybox
+ PRODUCT_PACKAGES += \
+     Launcher3 \
+     CMFileManager \
+     busybox \
+     WallpaperPicker
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
