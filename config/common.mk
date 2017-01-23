@@ -29,7 +29,8 @@ PRODUCT_COPY_FILES += \
      Launcher3 \
      CMFileManager \
      busybox \
-     WallpaperPicker
+     WallpaperPicker \
+     Apollo
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
