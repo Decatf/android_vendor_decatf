@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     liblog-benchmarks \
     bionic-benchmarks
 
+PRODUCT_PACKAGES += \
+	libtcg_arm \
+	libjaunt
+
 -include vendor/decatf/sepolicy/sepolicy.mk
 
 # Kernel toolchain
