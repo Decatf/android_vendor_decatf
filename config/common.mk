@@ -25,6 +25,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/decatf/prebuilt/supersu_config:system/supersu_config
 
+PRODUCT_COPY_FILES += \
+	vendor/decatf/prebuilt/bin/set_hwui_params.sh:system/vendor/bin/set_hwui_params.sh
+
  PRODUCT_PACKAGES += \
      Launcher3 \
      CMFileManager \
