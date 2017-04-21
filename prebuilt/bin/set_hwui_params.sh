@@ -95,7 +95,7 @@ get_default_display_pixel_count()
 PIXEL_COUNT=$(get_default_display_pixel_count)
 TOTAL_SYS_MEMSIZE=$(get_total_system_memory)
 
-if [ "$PIXEL_COUNT" -le "1000000" ]; then
+if [ "$PIXEL_COUNT" -le "1024000" ]; then
     property_set_if_none "ro.hwui.texture_cache_size" "24.0"
     property_set_if_none "ro.hwui.layer_cache_size" "16.0"
     property_set_if_none "ro.hwui.gradient_cache_size" "0.5"
