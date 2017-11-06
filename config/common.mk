@@ -10,7 +10,8 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/decatf/overlay/common
 
 # Init script file with custom extras
 PRODUCT_COPY_FILES += \
-    vendor/decatf/prebuilt/etc/init.local.rc:root/init.custom.rc
+    vendor/decatf/prebuilt/etc/init.local.rc:root/init.custom.rc \
+    vendor/decatf/prebuilt/etc/init.voodoo_sound.rc:root/init.voodoo_sound.rc
 
 # init.d support
 PRODUCT_COPY_FILES += \

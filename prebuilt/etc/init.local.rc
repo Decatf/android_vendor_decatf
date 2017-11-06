@@ -1,3 +1,4 @@
+import /init.voodoo_sound.rc
 
 on init
     # Set up the BFQIO hierarchy

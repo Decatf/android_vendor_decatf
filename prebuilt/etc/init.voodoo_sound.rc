@@ -1,0 +1,58 @@
+on post-fs-data
+    # global writeable for voodoo sound app
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/mono_downmix
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/stereo_expansion
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/adc_osr128
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/dac_direct
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/dac_osr128
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/digital_gain
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/headphone_amplifier_level
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/headphone_eq
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b1_gain
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b2_gain
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b3_gain
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b4_gain
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b5_gain
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/mono_downmix
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/recording_preset
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/stereo_expansion
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/stereo_expansion_gain
+    chmod 0666 /sys/devices/virtual/misc/voodoo_sound/version
+
+    chown system system /sys/devices/virtual/misc/voodoo_sound/mono_downmix
+    chown system system /sys/devices/virtual/misc/voodoo_sound/stereo_expansion
+    chown system system /sys/devices/virtual/misc/voodoo_sound/adc_osr128
+    chown system system /sys/devices/virtual/misc/voodoo_sound/dac_direct
+    chown system system /sys/devices/virtual/misc/voodoo_sound/dac_osr128
+    chown system system /sys/devices/virtual/misc/voodoo_sound/digital_gain
+    chown system system /sys/devices/virtual/misc/voodoo_sound/headphone_amplifier_level
+    chown system system /sys/devices/virtual/misc/voodoo_sound/headphone_eq
+    chown system system /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b1_gain
+    chown system system /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b2_gain
+    chown system system /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b3_gain
+    chown system system /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b4_gain
+    chown system system /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b5_gain
+    chown system system /sys/devices/virtual/misc/voodoo_sound/mono_downmix
+    chown system system /sys/devices/virtual/misc/voodoo_sound/recording_preset
+    chown system system /sys/devices/virtual/misc/voodoo_sound/stereo_expansion
+    chown system system /sys/devices/virtual/misc/voodoo_sound/stereo_expansion_gain
+    chown system system /sys/devices/virtual/misc/voodoo_sound/version
+    
+    restorecon /sys/devices/virtual/misc/voodoo_sound/mono_downmix
+    restorecon /sys/devices/virtual/misc/voodoo_sound/stereo_expansion
+    restorecon /sys/devices/virtual/misc/voodoo_sound/adc_osr128
+    restorecon /sys/devices/virtual/misc/voodoo_sound/dac_direct
+    restorecon /sys/devices/virtual/misc/voodoo_sound/dac_osr128
+    restorecon /sys/devices/virtual/misc/voodoo_sound/digital_gain
+    restorecon /sys/devices/virtual/misc/voodoo_sound/headphone_amplifier_level
+    restorecon /sys/devices/virtual/misc/voodoo_sound/headphone_eq
+    restorecon /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b1_gain
+    restorecon /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b2_gain
+    restorecon /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b3_gain
+    restorecon /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b4_gain
+    restorecon /sys/devices/virtual/misc/voodoo_sound/headphone_eq_b5_gain
+    restorecon /sys/devices/virtual/misc/voodoo_sound/mono_downmix
+    restorecon /sys/devices/virtual/misc/voodoo_sound/recording_preset
+    restorecon /sys/devices/virtual/misc/voodoo_sound/stereo_expansion
+    restorecon /sys/devices/virtual/misc/voodoo_sound/stereo_expansion_gain
+    restorecon /sys/devices/virtual/misc/voodoo_sound/version
