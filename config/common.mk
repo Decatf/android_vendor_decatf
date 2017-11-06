@@ -1,7 +1,7 @@
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/decatf/prebuilt/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/decatf/prebuilt/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/decatf/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/decatf/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/decatf/prebuilt/bin/50-hosts.sh:system/addon.d/50-hosts.sh \
     vendor/decatf/prebuilt/bin/blacklist:system/addon.d/blacklist
 
