@@ -61,12 +61,12 @@ PID_TPS6586=$(pgrep 'irq/294-tps6586')
 [[ -n $PID_SEC_JACK ]] && chrt -p $PID_SEC_JACK -r 1
 [[ -n $PID_TPS6586 ]] && chrt -p $PID_TPS6586 -r 1
 
-PID_MMC0=$(pgrep 'irq/288-mmc0')
-PID_DHD=$(pgrep 'dhd_dpc')
-[[ -n $PID_MMC0 ]] && chrt -p $PID_MMC0 -o 0
-[[ -n $PID_DHD ]] && chrt -p $PID_DHD -o 0
-[[ -n $PID_MMC0 ]] && renice -n +2 -p $PID_MMC0
-[[ -n $PID_DHD ]] && renice -n +2 -p $PID_DHD
+# PID_MMC0=$(pgrep 'irq/288-mmc0')
+# PID_DHD=$(pgrep 'dhd_dpc')
+# [[ -n $PID_MMC0 ]] && chrt -p $PID_MMC0 -o 0
+# [[ -n $PID_DHD ]] && chrt -p $PID_DHD -o 0
+# [[ -n $PID_MMC0 ]] && renice -n +2 -p $PID_MMC0
+# [[ -n $PID_DHD ]] && renice -n +2 -p $PID_DHD
 
 # Allow storage to be preempted(???)
 PID_MMCQD1=$(ps -A | grep -E '\[mmcqd\/1\]' | awk '{ print $2 }')
