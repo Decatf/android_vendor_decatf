@@ -69,8 +69,8 @@ PID_TPS6586=$(pgrep 'irq/294-tps6586')
 # [[ -n $PID_DHD ]] && renice -n +2 -p $PID_DHD
 
 # Allow storage to be preempted(???)
-PID_MMCQD1=$(ps -A | grep -E '\[mmcqd\/1\]' | awk '{ print $2 }')
-[[ -n $PID_MMCQD1 ]] && chrt -p $PID_MMCQD1 -r 1
+# PID_MMCQD1=$(ps -A | grep -E '\[mmcqd\/1\]' | awk '{ print $2 }')
+# [[ -n $PID_MMCQD1 ]] && chrt -p $PID_MMCQD1 -r 1
 
 # irq threads are created with:
 #   sched_priority = MAX_USER_RT_PRIO/2
